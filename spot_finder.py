@@ -217,6 +217,8 @@ def describe_spot(result, event_type="milkyway", mw_direction=None, mw_window=No
     """
     Build a plain-English card for a ranked spot result.
     Returns (headline, detail) strings. Jargon goes in brackets after plain words.
+    Recommendations are area-level — always verify access, permits, hours,
+    and seasonal closures before visiting any location.
     """
     s = result["spot"]
     emoji = SIGNAL_EMOJI.get(result["signal"], "\u26AA")

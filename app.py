@@ -1,6 +1,7 @@
 import streamlit as st
 import datetime
 from astro_engine import SkyEngine
+from logger import log_pageload, log_error, log_event, get_summary
 from spot_finder import (
     load_spots, find_nearby_spots, describe_spot,
     compass_from_azimuth, altitude_words,
@@ -15,6 +16,10 @@ st.markdown("""
   .block-container { padding-top: 1rem; padding-bottom: 0.5rem; }
   /* Metric label smaller */
   [data-testid="metric-container"] label { font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 0.04em; }
+  /* Event time labels — white, slightly smaller than body */
+  .event-label { color: #ffffff; font-size: 0.88rem; line-height: 1.4; }
+  /* Tooltip icon sits inline, slightly smaller and grey */
+  .event-label + div button { font-size: 0.78rem !important; color: #888 !important; }
   /* Section headers */
   .section-header { font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
                     letter-spacing: 0.08em; color: #888; margin-bottom: 0.3rem; margin-top: 0.8rem; }
@@ -268,6 +273,7 @@ with loc_c2:
             selected_city = all_options[all_options.index(selected_city) + 1]
         lat, lng = US_CITIES[selected_city]
         location_label = selected_city
+        st.session_state["selected_city_name"] = selected_city
 
     elif input_mode == "Search":
         index = get_place_index()
@@ -299,18 +305,29 @@ with loc_c2:
             lng = st.session_state["search_lng"]
             location_label = st.session_state.get("search_label", f"{lat:.2f}, {lng:.2f}")
         else:
-            lat, lng = 39.5, -98.35
-            location_label = "United States (center)"
+            # Fall back to current city selection so data stays consistent
+            _city_name = st.session_state.get("selected_city_name", "Seattle, WA")
+            lat, lng = US_CITIES.get(_city_name, (47.6062, -122.3321))
+            location_label = _city_name
 
     else:
         for k in ("search_lat","search_lng","search_label"):
             st.session_state.pop(k, None)
+        # Default coordinates to current city selection
+        _city_name = st.session_state.get("selected_city_name", "Seattle, WA")
+        _def_lat, _def_lng = US_CITIES.get(_city_name, (47.6062, -122.3321))
         cv1, cv2 = st.columns(2)
-        lat = cv1.number_input("Lat", value=39.74, min_value=18.0, max_value=72.0,
+        lat = cv1.number_input("Lat", value=_def_lat, min_value=18.0, max_value=72.0,
                                format="%.4f", label_visibility="collapsed")
-        lng = cv2.number_input("Lng", value=-104.99, min_value=-180.0, max_value=-66.0,
+        lng = cv2.number_input("Lng", value=_def_lng, min_value=-180.0, max_value=-66.0,
                                format="%.4f", label_visibility="collapsed")
-        location_label = f"{lat:.4f}°, {lng:.4f}°"
+        # Try to find a nearby known city name for the label
+        _coord_label = None
+        for _cname, (_clat, _clng) in US_CITIES.items():
+            if abs(_clat - lat) < 0.05 and abs(_clng - lng) < 0.05:
+                _coord_label = _cname
+                break
+        location_label = _coord_label if _coord_label else f"Custom location ({lat:.2f}°, {lng:.2f}°)"
 
 with loc_c3:
     engine = SkyEngine(lat, lng)
@@ -333,6 +350,20 @@ with st.spinner(""):
 sunrise_q = quality["sunrise"]["score"]
 sunset_q  = quality["sunset"]["score"]
 mw_q      = quality["milky_way"]["score"]
+
+# Log this page load — mw and weather are now available
+try:
+    _times_raw, _ = get_weather(round(lat, 2), round(lng, 2))
+    log_pageload(
+        location   = location_label,
+        lat        = lat,
+        lng        = lng,
+        date       = selected_date,
+        mw_visible = bool(mw.get("visible")),
+        weather_ok = len(_times_raw) > 0,
+    )
+except Exception as _log_err:
+    log_error(location_label, lat, lng, selected_date, _log_err)
 
 # ── Plain English summary ─────────────────────────────────────────────────────
 def build_summary():
@@ -382,36 +413,54 @@ with col_times:
     ev = sun.get("evening_golden_hour", {})
     tw = sun.get("twilight", {})
 
+    # Event rows: (label, value, quality_score, tooltip_text)
+    true_dark_start = tw.get("astronomical_end")
+    true_dark_end   = tw.get("astronomical_start")
+
+    if true_dark_start and true_dark_end:
+        dark_window = f"{fmt(true_dark_start)} – {fmt(true_dark_end)}"
+        dark_tip = "The window when the sky is fully dark and stars are at their brightest. Outside this window the sun is still lighting up the atmosphere."
+    elif true_dark_start:
+        dark_window = f"After {fmt(true_dark_start)}"
+        dark_tip = "Sky reaches full darkness after this time."
+    else:
+        dark_window = "None tonight"
+        dark_tip = "No true darkness tonight — common in midsummer at northern latitudes."
+
     rows = [
-        ("Sunrise",   fmt(sun.get("sunrise")),   sunrise_q),
-        ("Golden hour (AM)", f"{fmt(gh.get('start'))} – {fmt(gh.get('end'))}", None),
-        ("Sunset",    fmt(sun.get("sunset")),     sunset_q),
-        ("Golden hour (PM)", f"{fmt(ev.get('start'))} – {fmt(ev.get('end'))}", None),
-        ("Moonrise",  fmt(moon.get("moonrise")),  None),
-        ("Moonset",   fmt(moon.get("moonset")),   None),
+        ("Sunrise",       fmt(sun.get("sunrise")),   sunrise_q,
+         "Sun appears above the horizon."),
+        ("Golden hour (AM)",   f"{fmt(gh.get('start'))} – {fmt(gh.get('end'))}",  None,
+         "Soft, warm light just after sunrise — best time for outdoor photos."),
+        ("Sunset",        fmt(sun.get("sunset")),    sunset_q,
+         "Sun dips below the horizon."),
+        ("Golden hour (PM)",   f"{fmt(ev.get('start'))} – {fmt(ev.get('end'))}",  None,
+         "Soft, warm light just before sunset — best time for outdoor photos."),
+        ("Moonrise",      fmt(moon.get("moonrise")), None,
+         "Moon appears above the horizon. A bright moon can wash out stars."),
+        ("Moonset",       fmt(moon.get("moonset")),  None,
+         "Moon drops below the horizon. Stargazing improves after this."),
+        ("Civil twilight",
+         f"{fmt(tw.get('civil_end'))} – {fmt(tw.get('civil_start'))}", None,
+         "Period after sunset (and before sunrise) when it is dim but not fully dark — still enough light to see outside without a torch. Good for setting up equipment or hiking out."),
+        ("Dark sky (Astronomical twilight)", dark_window, None,
+         dark_tip),
     ]
     if mw.get("visible"):
-        rows.append(("Milky Way opens",  fmt(mw.get("window_start")), mw_q))
-        rows.append(("Milky Way closes", fmt(mw.get("window_end")),   None))
+        rows.append(("Milky Way",
+                     f"{fmt(mw.get('window_start'))} – {fmt(mw.get('window_end'))}",
+                     mw_q,
+                     "Window when the bright core of the Milky Way is above the horizon and visible to the naked eye."))
     else:
-        rows.append(("Milky Way", "Not visible tonight", "poor"))
+        rows.append(("Milky Way", "Not visible tonight", "poor",
+                     "The Milky Way core stays below the horizon tonight. Most visible March–October from the US."))
 
-    for label, value, score in rows:
-        r1, r2, r3 = st.columns([1.6, 1.5, 0.3])
-        r1.caption(label)
+    for label, value, score, tip in rows:
+        r1, r2, r3 = st.columns([1.3, 1.8, 0.3])
+        r1.caption(label, help=tip)
         r2.markdown(f"**{value}**")
         if score:
             r3.markdown(score_dot(score), unsafe_allow_html=True)
-
-    # Twilight in expander — keeps the column tight
-    with st.expander("Twilight detail", expanded=True):
-        for label, val in [
-            ("Civil (AM)", fmt(tw.get("civil_start"))),
-            ("Civil (PM)", fmt(tw.get("civil_end"))),
-            ("Astronomical (AM)", fmt(tw.get("astronomical_start"))),
-            ("Astronomical (PM — true dark)", fmt(tw.get("astronomical_end"))),
-        ]:
-            st.caption(f"{label}  **{val}**")
 
 # ── Column 2: Sky Conditions ──────────────────────────────────────────────────
 with col_sky:
@@ -438,16 +487,21 @@ with col_sky:
         )
         st.markdown("")
 
-    # Quality scores
+    # Quality scores — tight spacing, dot aligned with text
     st.markdown("**Conditions**")
     for label, score, reason in [
         ("Sunrise",   sunrise_q, quality["sunrise"]["reason"]),
         ("Sunset",    sunset_q,  quality["sunset"]["reason"]),
         ("Milky Way", mw_q,      quality["milky_way"]["reason"]),
     ]:
-        s1, s2 = st.columns([0.7, 3])
-        s1.markdown(score_dot(score), unsafe_allow_html=True)
-        s2.caption(f"**{label}** — {reason}")
+        dot_color = SCORE_COLOR.get(score, "#888")
+        st.markdown(
+            f'''<div style="display:flex;align-items:flex-start;gap:8px;margin-bottom:4px;">
+            <span style="color:{dot_color};font-size:0.9rem;line-height:1.5;flex-shrink:0;">●</span>
+            <span style="font-size:0.82rem;color:#ccc;line-height:1.5;"><strong style="color:#fff">{label}</strong> — {reason}</span>
+            </div>''',
+            unsafe_allow_html=True
+        )
 
     st.markdown("")
 
@@ -473,6 +527,7 @@ with col_sky:
 # ── Column 3: Nearby Spots ────────────────────────────────────────────────────
 with col_spots:
     st.markdown('<div class="section-header">Nearby Viewing Spots</div>', unsafe_allow_html=True)
+    st.caption("Areas ranked by tonight's conditions. Verify access, permits, seasonal closures, and safety conditions before visiting.")
 
     spots    = get_spots()
     date_iso = selected_date.isoformat()

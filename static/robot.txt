@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /monitoring
+Disallow: /logs/
+
+# SkyWatch — https://github.com/sidni5/skywatch
+# A free sky conditions app for the US.

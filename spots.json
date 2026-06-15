@@ -1225,6 +1225,429 @@
         "stars"
       ],
       "notes": "High plateau; one of the darkest spots in the Mid-Atlantic."
+    },
+    {
+      "id": "dauphin-island-al",
+      "name": "Dauphin Island (Gulf Coast)",
+      "type": "viewpoint",
+      "state": "AL",
+      "lat": 30.2521,
+      "lng": -88.1039,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunset"
+      ],
+      "notes": "Gulf-facing beach; open southern horizon. Public island, free access."
+    },
+    {
+      "id": "bankhead-forest-al",
+      "name": "Sipsey Wilderness, Bankhead NF",
+      "type": "viewpoint",
+      "state": "AL",
+      "lat": 34.344,
+      "lng": -87.407,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote national forest; reasonably dark for the Southeast."
+    },
+    {
+      "id": "sleeping-giant-ct",
+      "name": "Sleeping Giant State Park",
+      "type": "viewpoint",
+      "state": "CT",
+      "lat": 41.4215,
+      "lng": -72.899,
+      "bortle": 5,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Ridge views; limited darkness due to surrounding suburbs. Best for sunsets."
+    },
+    {
+      "id": "cape-henlopen-de",
+      "name": "Cape Henlopen State Park",
+      "type": "viewpoint",
+      "state": "DE",
+      "lat": 38.7876,
+      "lng": -75.089,
+      "bortle": 4,
+      "bestFor": [
+        "sunrise",
+        "stars"
+      ],
+      "notes": "Atlantic-facing beach; open eastern horizon. Entry fee applies."
+    },
+    {
+      "id": "shawnee-il",
+      "name": "Garden of the Gods, Shawnee NF",
+      "type": "viewpoint",
+      "state": "IL",
+      "lat": 37.598,
+      "lng": -88.228,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars",
+        "sunset"
+      ],
+      "notes": "Southern Illinois; one of the darker spots in the state. Open sandstone overlooks."
+    },
+    {
+      "id": "hoosier-in",
+      "name": "Hoosier National Forest (Tell City)",
+      "type": "viewpoint",
+      "state": "IN",
+      "lat": 37.951,
+      "lng": -86.761,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Southern Indiana; darker than the rest of the state."
+    },
+    {
+      "id": "effigy-mounds-ia",
+      "name": "Effigy Mounds National Monument",
+      "type": "park",
+      "state": "IA",
+      "lat": 43.0851,
+      "lng": -91.186,
+      "bortle": 3,
+      "bestFor": [
+        "stars",
+        "milkyway"
+      ],
+      "notes": "Bluff overlooks above the Mississippi; reasonably dark rural area."
+    },
+    {
+      "id": "mammoth-cave-ky",
+      "name": "Mammoth Cave National Park",
+      "type": "park",
+      "state": "KY",
+      "lat": 37.187,
+      "lng": -86.1006,
+      "bortle": 3,
+      "bestFor": [
+        "stars",
+        "milkyway"
+      ],
+      "notes": "Rural central Kentucky; open meadows around the visitor area are reasonably dark."
+    },
+    {
+      "id": "kisatchie-la",
+      "name": "Kisatchie National Forest",
+      "type": "viewpoint",
+      "state": "LA",
+      "lat": 31.321,
+      "lng": -92.905,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Central Louisiana; one of the few darker areas in the state."
+    },
+    {
+      "id": "monomoy-ma",
+      "name": "Monomoy National Wildlife Refuge, Cape Cod",
+      "type": "viewpoint",
+      "state": "MA",
+      "lat": 41.616,
+      "lng": -70.0,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunrise"
+      ],
+      "notes": "Remote tip of Cape Cod; ocean horizon to the east and south. Access via ferry or kayak."
+    },
+    {
+      "id": "quabbin-ma",
+      "name": "Quabbin Reservoir Area",
+      "type": "viewpoint",
+      "state": "MA",
+      "lat": 42.338,
+      "lng": -72.339,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "milkyway"
+      ],
+      "notes": "Central Massachusetts reservoir; one of the darker spots in the state. General area — explore public access points."
+    },
+    {
+      "id": "ozark-rivers-mo",
+      "name": "Ozark National Scenic Riverways",
+      "type": "park",
+      "state": "MO",
+      "lat": 36.972,
+      "lng": -91.245,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Rural southern Missouri; open river valley with dark skies."
+    },
+    {
+      "id": "sandhills-ne",
+      "name": "Nebraska Sandhills (Valentine area)",
+      "type": "viewpoint",
+      "state": "NE",
+      "lat": 42.8724,
+      "lng": -100.551,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "One of the darkest regions in the continental US. Vast open grassland with 360-degree horizons. General area — use public roads and wildlife refuges."
+    },
+    {
+      "id": "adirondacks-ny",
+      "name": "Adirondack Park (Blue Mountain Lake)",
+      "type": "park",
+      "state": "NY",
+      "lat": 43.865,
+      "lng": -74.431,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Large wilderness park; look for public boat launches and campgrounds for open views."
+    },
+    {
+      "id": "catskills-ny",
+      "name": "Catskill Mountains (Slide Mountain area)",
+      "type": "viewpoint",
+      "state": "NY",
+      "lat": 41.999,
+      "lng": -74.385,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunset"
+      ],
+      "notes": "Closer to NYC but reasonably dark in the higher elevations."
+    },
+    {
+      "id": "blue-ridge-nc",
+      "name": "Blue Ridge Parkway (NC — Waterrock Knob)",
+      "type": "viewpoint",
+      "state": "NC",
+      "lat": 35.4585,
+      "lng": -83.1375,
+      "bortle": 3,
+      "bestFor": [
+        "sunset",
+        "stars",
+        "milkyway"
+      ],
+      "notes": "High-elevation pullout on the Parkway; open western and southern views."
+    },
+    {
+      "id": "nantahala-nc",
+      "name": "Nantahala National Forest",
+      "type": "viewpoint",
+      "state": "NC",
+      "lat": 35.124,
+      "lng": -83.592,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote western NC mountains; general area is dark and accessible from forest roads."
+    },
+    {
+      "id": "hocking-hills-oh",
+      "name": "Hocking Hills State Park",
+      "type": "park",
+      "state": "OH",
+      "lat": 39.434,
+      "lng": -82.529,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunset"
+      ],
+      "notes": "One of Ohios darker accessible spots; wooded but clearings available."
+    },
+    {
+      "id": "wichita-mtns-ok",
+      "name": "Wichita Mountains Wildlife Refuge",
+      "type": "viewpoint",
+      "state": "OK",
+      "lat": 34.73,
+      "lng": -98.688,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Open prairie refuge; surprisingly dark for Oklahoma. Free access."
+    },
+    {
+      "id": "block-island-ri",
+      "name": "Block Island",
+      "type": "viewpoint",
+      "state": "RI",
+      "lat": 41.1754,
+      "lng": -71.577,
+      "bortle": 3,
+      "bestFor": [
+        "stars",
+        "sunrise"
+      ],
+      "notes": "Island off the coast; darker than the mainland. Ferry access required."
+    },
+    {
+      "id": "governor-dodge-wi",
+      "name": "Governor Dodge State Park",
+      "type": "park",
+      "state": "WI",
+      "lat": 43.011,
+      "lng": -90.126,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Southwest Wisconsin; one of the darker state parks. Open meadow areas."
+    },
+    {
+      "id": "apostle-islands-wi",
+      "name": "Apostle Islands National Lakeshore",
+      "type": "park",
+      "state": "WI",
+      "lat": 46.933,
+      "lng": -90.678,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote Lake Superior islands; very dark. Boat or kayak access required for islands."
+    },
+    {
+      "id": "valley-of-fire-nv",
+      "name": "Valley of Fire State Park",
+      "type": "viewpoint",
+      "state": "NV",
+      "lat": 36.4726,
+      "lng": -114.525,
+      "bortle": 3,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Red sandstone formations; good sunset views and reasonably dark."
+    },
+    {
+      "id": "pine-barrens-nj",
+      "name": "Pinelands National Reserve (Pine Barrens)",
+      "type": "viewpoint",
+      "state": "NJ",
+      "lat": 39.92,
+      "lng": -74.596,
+      "bortle": 4,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Largest dark sky area in the NJ/NY metro region. General area — many public access roads through the forest."
+    },
+    {
+      "id": "grayson-highlands-va",
+      "name": "Grayson Highlands State Park",
+      "type": "park",
+      "state": "VA",
+      "lat": 36.636,
+      "lng": -81.498,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars",
+        "sunrise"
+      ],
+      "notes": "High-elevation SW Virginia; open balds with wide sky views."
+    },
+    {
+      "id": "elk-county-pa",
+      "name": "Elk County Dark Sky Area",
+      "type": "viewpoint",
+      "state": "PA",
+      "lat": 41.421,
+      "lng": -78.643,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "North-central PA; second darkest region in the state after Cherry Springs."
+    },
+    {
+      "id": "big-south-fork-tn",
+      "name": "Big South Fork NRRA",
+      "type": "park",
+      "state": "TN",
+      "lat": 36.492,
+      "lng": -84.708,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote gorge area on the KY/TN border; open plateau sections are reasonably dark."
+    },
+    {
+      "id": "spruce-knob-wv",
+      "name": "Spruce Knob",
+      "type": "viewpoint",
+      "state": "WV",
+      "lat": 38.699,
+      "lng": -79.533,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Highest point in WV; very dark and open. Summit meadow has wide sky views."
+    },
+    {
+      "id": "deep-creek-md",
+      "name": "Deep Creek Lake area",
+      "type": "viewpoint",
+      "state": "MD",
+      "lat": 39.524,
+      "lng": -79.303,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Western Maryland mountains; one of the darker areas in the state."
+    },
+    {
+      "id": "cohutta-ga",
+      "name": "Cohutta Wilderness, Chattahoochee NF",
+      "type": "viewpoint",
+      "state": "GA",
+      "lat": 34.863,
+      "lng": -84.609,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote north Georgia mountains; general wilderness area, very dark."
     }
   ]
 }

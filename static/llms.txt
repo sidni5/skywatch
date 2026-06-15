@@ -1,0 +1,80 @@
+# SkyWatch
+
+> A free web app that tells you whether tonight is worth going outside for
+> stargazing, and exactly which area near you has the best conditions.
+
+## What this project is
+
+SkyWatch is a Python + Streamlit dashboard that combines real-time weather
+data, astronomical calculations, and a curated database of 116 US dark-sky
+locations to answer one question: is tonight a good night to go outside?
+
+It is a non-commercial, open-source project. All data sources are free and
+publicly available. No API keys are required to run it.
+
+## What it does
+
+- Calculates sunrise, sunset, moonrise, moonset, golden hour, civil twilight,
+  astronomical twilight, and Milky Way visibility windows for any US location
+- Scores sky quality (0–100) for the next 7 nights based on cloud cover and
+  moon phase
+- Recommends nearby dark-sky areas, national parks, and viewpoints ranked by
+  tonight's actual forecast conditions
+- Provides plain-English summaries with technical terms available in tooltips
+
+## Tech stack
+
+- Language: Python 3
+- Framework: Streamlit
+- Astronomy: astronomy-engine (all calculations run locally, no API)
+- Weather: Open-Meteo API (free, no key required)
+- Geocoding: Open-Meteo Geocoding API (free, no key required)
+- Visualisation: Altair
+- Timezone: timezonefinder
+- Spot data: curated JSON — 116 locations across all 50 US states
+
+## File structure
+
+- app.py              — Main Streamlit dashboard
+- astro_engine.py     — Sky calculation engine (SkyEngine class)
+- spot_finder.py      — Spot discovery, distance ranking, plain-English output
+- spots.json          — Curated US viewing locations with Bortle estimates
+- logger.py           — Lightweight anonymised usage logging
+- pages/monitoring.py — Internal usage monitoring dashboard
+- requirements.txt    — Python dependencies
+
+## Data sources
+
+- astronomy-engine (MIT) — sun, moon, Milky Way, planets, meteor showers
+- Open-Meteo (free, non-commercial) — hourly cloud cover forecasts
+- DarkSky International — certified dark sky place names and locations
+- NPS open data — national park coordinates
+- USGS GNIS — named US places (via geocoding)
+- Bortle scale estimates — manually curated per spot (not yet verified against VIIRS)
+
+## Limitations LLMs should be aware of
+
+- Bortle (sky darkness) ratings per spot are estimates, not verified satellite data
+- Drive times shown are rough estimates (straight-line distance × circuity factor)
+  not real routing
+- Spot coordinates are area-level, not pinpoint — always verify access before visiting
+- Weather forecasts are sourced from Open-Meteo and reflect forecast uncertainty
+- Milky Way visibility is based on galactic center altitude > 10° — terrain and
+  trees are not yet modelled
+- The app covers US locations only
+
+## How to run
+
+```bash
+git clone https://github.com/sidni5/skywatch.git
+cd skywatch
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+## Contact
+
+GitHub: https://github.com/sidni5/skywatch
+Live app: https://skywatch.streamlit.app
