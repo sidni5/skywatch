@@ -1,0 +1,1230 @@
+{
+  "meta": {
+    "description": "Curated US sky-watching spots: dark-sky places, national parks, and iconic viewpoints.",
+    "coordinates_note": "Coordinates are approximate centroids/access points and are good enough for distance ranking and rough drive times. Refine for production.",
+    "bortle_note": "bortle values are ESTIMATES (1 = darkest sky, 9 = inner-city). Replace with a real VIIRS / lightpollutionmap lookup when ready.",
+    "bestFor_values": [
+      "milkyway",
+      "sunset",
+      "sunrise",
+      "stars"
+    ],
+    "version": 1
+  },
+  "spots": [
+    {
+      "id": "rattlesnake-ledge-wa",
+      "name": "Rattlesnake Ledge",
+      "type": "viewpoint",
+      "state": "WA",
+      "lat": 47.4345,
+      "lng": -121.768,
+      "bortle": 4,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Popular short hike near North Bend; open western view, treeline to the east."
+    },
+    {
+      "id": "rainier-sunrise-wa",
+      "name": "Mount Rainier — Sunrise Point",
+      "type": "park",
+      "state": "WA",
+      "lat": 46.9145,
+      "lng": -121.643,
+      "bortle": 2,
+      "bestFor": [
+        "sunrise",
+        "milkyway",
+        "stars"
+      ],
+      "notes": "High-elevation point; very dark. Road typically closed in winter."
+    },
+    {
+      "id": "rainier-paradise-wa",
+      "name": "Mount Rainier — Paradise",
+      "type": "park",
+      "state": "WA",
+      "lat": 46.786,
+      "lng": -121.737,
+      "bortle": 3,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Open southern sky in summer; check road access."
+    },
+    {
+      "id": "north-cascades-wa",
+      "name": "North Cascades National Park",
+      "type": "park",
+      "state": "WA",
+      "lat": 48.7718,
+      "lng": -121.2985,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote and dark; mountain horizons block low views."
+    },
+    {
+      "id": "olympic-hurricane-wa",
+      "name": "Hurricane Ridge (Olympic NP)",
+      "type": "park",
+      "state": "WA",
+      "lat": 47.969,
+      "lng": -123.497,
+      "bortle": 3,
+      "bestFor": [
+        "sunset",
+        "stars",
+        "milkyway"
+      ],
+      "notes": "Open ridge with wide horizons."
+    },
+    {
+      "id": "crater-lake-or",
+      "name": "Crater Lake National Park",
+      "type": "park",
+      "state": "OR",
+      "lat": 42.9446,
+      "lng": -122.109,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars",
+        "sunrise"
+      ],
+      "notes": "Designated dark sky; very clear high-desert air."
+    },
+    {
+      "id": "smith-rock-or",
+      "name": "Smith Rock State Park",
+      "type": "park",
+      "state": "OR",
+      "lat": 44.3677,
+      "lng": -121.1409,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars",
+        "sunset"
+      ],
+      "notes": "High desert, open southern sky."
+    },
+    {
+      "id": "yosemite-glacier-ca",
+      "name": "Glacier Point (Yosemite)",
+      "type": "park",
+      "state": "CA",
+      "lat": 37.728,
+      "lng": -119.574,
+      "bortle": 3,
+      "bestFor": [
+        "sunset",
+        "stars",
+        "milkyway"
+      ],
+      "notes": "Iconic overlook; seasonal road."
+    },
+    {
+      "id": "death-valley-ca",
+      "name": "Death Valley National Park",
+      "type": "darksky",
+      "state": "CA",
+      "lat": 36.5323,
+      "lng": -116.9325,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Gold-tier dark sky; some of the darkest skies in the US."
+    },
+    {
+      "id": "joshua-tree-ca",
+      "name": "Joshua Tree National Park",
+      "type": "darksky",
+      "state": "CA",
+      "lat": 33.8734,
+      "lng": -115.901,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky park; glow from Coachella Valley to the west."
+    },
+    {
+      "id": "lassen-ca",
+      "name": "Lassen Volcanic National Park",
+      "type": "park",
+      "state": "CA",
+      "lat": 40.4977,
+      "lng": -121.4207,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote, very dark."
+    },
+    {
+      "id": "pinnacles-ca",
+      "name": "Pinnacles National Park",
+      "type": "park",
+      "state": "CA",
+      "lat": 36.4906,
+      "lng": -121.1825,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunset"
+      ],
+      "notes": "Reasonably dark within reach of the Bay Area."
+    },
+    {
+      "id": "mount-tam-ca",
+      "name": "Mount Tamalpais",
+      "type": "viewpoint",
+      "state": "CA",
+      "lat": 37.929,
+      "lng": -122.596,
+      "bortle": 5,
+      "bestFor": [
+        "sunset"
+      ],
+      "notes": "Bay Area glow; great sunsets over the Pacific."
+    },
+    {
+      "id": "grand-canyon-az",
+      "name": "Grand Canyon National Park (South Rim)",
+      "type": "darksky",
+      "state": "AZ",
+      "lat": 36.059,
+      "lng": -112.11,
+      "bortle": 2,
+      "bestFor": [
+        "sunrise",
+        "sunset",
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Certified dark sky park."
+    },
+    {
+      "id": "flagstaff-az",
+      "name": "Flagstaff (Buffalo Park)",
+      "type": "viewpoint",
+      "state": "AZ",
+      "lat": 35.205,
+      "lng": -111.636,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunset"
+      ],
+      "notes": "World's first Dark Sky City; town glow but well-managed."
+    },
+    {
+      "id": "sedona-az",
+      "name": "Sedona (Airport Mesa)",
+      "type": "viewpoint",
+      "state": "AZ",
+      "lat": 34.846,
+      "lng": -111.79,
+      "bortle": 4,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Dark sky community; red-rock sunsets."
+    },
+    {
+      "id": "saguaro-az",
+      "name": "Saguaro National Park",
+      "type": "park",
+      "state": "AZ",
+      "lat": 32.2967,
+      "lng": -111.1666,
+      "bortle": 4,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Tucson glow to the east; good western sunsets."
+    },
+    {
+      "id": "bryce-canyon-ut",
+      "name": "Bryce Canyon National Park",
+      "type": "darksky",
+      "state": "UT",
+      "lat": 37.593,
+      "lng": -112.1871,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars",
+        "sunrise"
+      ],
+      "notes": "Among the darkest skies in the country."
+    },
+    {
+      "id": "arches-ut",
+      "name": "Arches National Park",
+      "type": "darksky",
+      "state": "UT",
+      "lat": 38.7331,
+      "lng": -109.5925,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky park; Moab glow to the south."
+    },
+    {
+      "id": "canyonlands-ut",
+      "name": "Canyonlands National Park (Island in the Sky)",
+      "type": "darksky",
+      "state": "UT",
+      "lat": 38.4597,
+      "lng": -109.82,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars",
+        "sunset"
+      ],
+      "notes": "Very dark; wide open horizons."
+    },
+    {
+      "id": "zion-ut",
+      "name": "Zion National Park",
+      "type": "park",
+      "state": "UT",
+      "lat": 37.2982,
+      "lng": -113.0263,
+      "bortle": 3,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Canyon walls block low horizons."
+    },
+    {
+      "id": "capitol-reef-ut",
+      "name": "Capitol Reef National Park",
+      "type": "darksky",
+      "state": "UT",
+      "lat": 38.2872,
+      "lng": -111.2475,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Gold-tier dark sky."
+    },
+    {
+      "id": "great-basin-nv",
+      "name": "Great Basin National Park",
+      "type": "darksky",
+      "state": "NV",
+      "lat": 38.9833,
+      "lng": -114.3,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Some of the darkest skies in the lower 48."
+    },
+    {
+      "id": "rocky-mtn-co",
+      "name": "Rocky Mountain National Park",
+      "type": "park",
+      "state": "CO",
+      "lat": 40.3428,
+      "lng": -105.6836,
+      "bortle": 3,
+      "bestFor": [
+        "sunrise",
+        "stars",
+        "milkyway"
+      ],
+      "notes": "High peaks block low views; Denver glow to the SE."
+    },
+    {
+      "id": "great-sand-dunes-co",
+      "name": "Great Sand Dunes National Park",
+      "type": "darksky",
+      "state": "CO",
+      "lat": 37.7916,
+      "lng": -105.5943,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky park; open southern horizon."
+    },
+    {
+      "id": "black-canyon-co",
+      "name": "Black Canyon of the Gunnison",
+      "type": "darksky",
+      "state": "CO",
+      "lat": 38.5754,
+      "lng": -107.7416,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky park."
+    },
+    {
+      "id": "big-bend-tx",
+      "name": "Big Bend National Park",
+      "type": "darksky",
+      "state": "TX",
+      "lat": 29.1275,
+      "lng": -103.2425,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Darkest skies in the contiguous US."
+    },
+    {
+      "id": "enchanted-rock-tx",
+      "name": "Enchanted Rock",
+      "type": "darksky",
+      "state": "TX",
+      "lat": 30.5063,
+      "lng": -98.8197,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky area in the Hill Country."
+    },
+    {
+      "id": "guadalupe-tx",
+      "name": "Guadalupe Mountains National Park",
+      "type": "park",
+      "state": "TX",
+      "lat": 31.9231,
+      "lng": -104.8606,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote and dark."
+    },
+    {
+      "id": "cherry-springs-pa",
+      "name": "Cherry Springs State Park",
+      "type": "darksky",
+      "state": "PA",
+      "lat": 41.664,
+      "lng": -77.816,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Premier East Coast dark sky park; open 360° field."
+    },
+    {
+      "id": "acadia-cadillac-me",
+      "name": "Cadillac Mountain (Acadia)",
+      "type": "park",
+      "state": "ME",
+      "lat": 44.3528,
+      "lng": -68.2247,
+      "bortle": 4,
+      "bestFor": [
+        "sunrise",
+        "stars"
+      ],
+      "notes": "First place to see sunrise in the US for part of the year."
+    },
+    {
+      "id": "katahdin-woods-me",
+      "name": "Katahdin Woods and Waters",
+      "type": "darksky",
+      "state": "ME",
+      "lat": 45.85,
+      "lng": -68.6,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Designated dark sky; very remote."
+    },
+    {
+      "id": "shenandoah-va",
+      "name": "Shenandoah National Park (Big Meadows)",
+      "type": "park",
+      "state": "VA",
+      "lat": 38.52,
+      "lng": -78.44,
+      "bortle": 4,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Ridge-top meadows; DC/Richmond glow on horizons."
+    },
+    {
+      "id": "great-smoky-tn",
+      "name": "Great Smoky Mountains (Clingmans Dome)",
+      "type": "park",
+      "state": "TN",
+      "lat": 35.5628,
+      "lng": -83.4985,
+      "bortle": 3,
+      "bestFor": [
+        "sunset",
+        "stars"
+      ],
+      "notes": "Highest point in the park; often cloudy/humid."
+    },
+    {
+      "id": "mauna-kea-hi",
+      "name": "Mauna Kea Visitor Station",
+      "type": "viewpoint",
+      "state": "HI",
+      "lat": 19.7607,
+      "lng": -155.4564,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "World-class astronomy site; altitude caution."
+    },
+    {
+      "id": "haleakala-hi",
+      "name": "Haleakala Summit",
+      "type": "park",
+      "state": "HI",
+      "lat": 20.71,
+      "lng": -156.253,
+      "bortle": 2,
+      "bestFor": [
+        "sunrise",
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Famous sunrise; reservation required for sunrise."
+    },
+    {
+      "id": "denali-ak",
+      "name": "Denali National Park",
+      "type": "park",
+      "state": "AK",
+      "lat": 63.3333,
+      "lng": -150.5,
+      "bortle": 2,
+      "bestFor": [
+        "stars"
+      ],
+      "notes": "No true darkness near summer solstice; great in shoulder seasons."
+    },
+    {
+      "id": "glacier-mt",
+      "name": "Glacier National Park (Logan Pass)",
+      "type": "darksky",
+      "state": "MT",
+      "lat": 48.696,
+      "lng": -113.718,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky park; high mountain horizons."
+    },
+    {
+      "id": "yellowstone-wy",
+      "name": "Yellowstone (Lamar Valley)",
+      "type": "park",
+      "state": "WY",
+      "lat": 44.898,
+      "lng": -110.237,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Very dark; open valley."
+    },
+    {
+      "id": "grand-teton-wy",
+      "name": "Grand Teton (Schwabacher Landing)",
+      "type": "park",
+      "state": "WY",
+      "lat": 43.7,
+      "lng": -110.67,
+      "bortle": 2,
+      "bestFor": [
+        "sunrise",
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Tetons block western horizon; superb to the east."
+    },
+    {
+      "id": "craters-of-moon-id",
+      "name": "Craters of the Moon",
+      "type": "darksky",
+      "state": "ID",
+      "lat": 43.4166,
+      "lng": -113.5166,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky monument; open lava-plain horizons."
+    },
+    {
+      "id": "sawtooth-id",
+      "name": "Sawtooth (Redfish Lake)",
+      "type": "darksky",
+      "state": "ID",
+      "lat": 44.145,
+      "lng": -114.917,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Central Idaho Dark Sky Reserve."
+    },
+    {
+      "id": "badlands-sd",
+      "name": "Badlands National Park",
+      "type": "park",
+      "state": "SD",
+      "lat": 43.8554,
+      "lng": -102.3397,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars",
+        "sunset"
+      ],
+      "notes": "Open prairie horizons; very dark."
+    },
+    {
+      "id": "theodore-roosevelt-nd",
+      "name": "Theodore Roosevelt National Park",
+      "type": "park",
+      "state": "ND",
+      "lat": 46.979,
+      "lng": -103.538,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote and dark."
+    },
+    {
+      "id": "voyageurs-mn",
+      "name": "Voyageurs National Park",
+      "type": "darksky",
+      "state": "MN",
+      "lat": 48.5,
+      "lng": -92.88,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky park; northern lights possible."
+    },
+    {
+      "id": "headlands-mi",
+      "name": "Headlands Dark Sky Park",
+      "type": "darksky",
+      "state": "MI",
+      "lat": 45.777,
+      "lng": -84.77,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Lake Michigan shoreline; open northern view."
+    },
+    {
+      "id": "white-sands-nm",
+      "name": "White Sands National Park",
+      "type": "park",
+      "state": "NM",
+      "lat": 32.779,
+      "lng": -106.171,
+      "bortle": 3,
+      "bestFor": [
+        "sunset",
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Open dunes; missile-range closures occasionally."
+    },
+    {
+      "id": "chaco-nm",
+      "name": "Chaco Culture (Dark Sky Park)",
+      "type": "darksky",
+      "state": "NM",
+      "lat": 36.061,
+      "lng": -107.961,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Gold-tier dark sky; rough access road."
+    },
+    {
+      "id": "everglades-fl",
+      "name": "Everglades National Park",
+      "type": "park",
+      "state": "FL",
+      "lat": 25.286,
+      "lng": -80.8987,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunset"
+      ],
+      "notes": "Dark for the SE US; humid, buggy."
+    },
+    {
+      "id": "kissimmee-prairie-fl",
+      "name": "Kissimmee Prairie Preserve",
+      "type": "darksky",
+      "state": "FL",
+      "lat": 27.58,
+      "lng": -81.05,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Florida's darkest designated sky."
+    },
+    {
+      "id": "assateague-md",
+      "name": "Assateague Island",
+      "type": "viewpoint",
+      "state": "MD",
+      "lat": 38.25,
+      "lng": -75.15,
+      "bortle": 4,
+      "bestFor": [
+        "sunrise",
+        "stars"
+      ],
+      "notes": "Atlantic horizon; coastal glow north and south."
+    },
+    {
+      "id": "mount-washington-nh",
+      "name": "Mount Washington",
+      "type": "viewpoint",
+      "state": "NH",
+      "lat": 44.2705,
+      "lng": -71.3033,
+      "bortle": 3,
+      "bestFor": [
+        "sunrise",
+        "sunset",
+        "stars"
+      ],
+      "notes": "Extreme weather; access seasonal."
+    },
+    {
+      "id": "acadia-sand-beach-me",
+      "name": "Sand Beach (Acadia)",
+      "type": "viewpoint",
+      "state": "ME",
+      "lat": 44.329,
+      "lng": -68.183,
+      "bortle": 4,
+      "bestFor": [
+        "sunrise"
+      ],
+      "notes": "Ocean sunrise."
+    },
+    {
+      "id": "palouse-falls-wa",
+      "name": "Palouse Falls State Park",
+      "type": "viewpoint",
+      "state": "WA",
+      "lat": 46.663,
+      "lng": -118.224,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Eastern WA; dark and open."
+    },
+    {
+      "id": "steens-mtn-or",
+      "name": "Steens Mountain",
+      "type": "viewpoint",
+      "state": "OR",
+      "lat": 42.636,
+      "lng": -118.577,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote SE Oregon; extremely dark."
+    },
+    {
+      "id": "alvord-desert-or",
+      "name": "Alvord Desert",
+      "type": "viewpoint",
+      "state": "OR",
+      "lat": 42.516,
+      "lng": -118.535,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dry lakebed; 360° flat horizon, exceptional."
+    },
+    {
+      "id": "mono-lake-ca",
+      "name": "Mono Lake (South Tufa)",
+      "type": "viewpoint",
+      "state": "CA",
+      "lat": 37.94,
+      "lng": -119.027,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars",
+        "sunrise"
+      ],
+      "notes": "Tufa towers; open eastern Sierra."
+    },
+    {
+      "id": "trona-pinnacles-ca",
+      "name": "Trona Pinnacles",
+      "type": "viewpoint",
+      "state": "CA",
+      "lat": 35.616,
+      "lng": -117.368,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Mojave; open desert horizons."
+    },
+    {
+      "id": "antelope-island-ut",
+      "name": "Antelope Island State Park",
+      "type": "darksky",
+      "state": "UT",
+      "lat": 40.95,
+      "lng": -112.2,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunset"
+      ],
+      "notes": "Dark sky park near Salt Lake; lake glow."
+    },
+    {
+      "id": "dinosaur-co",
+      "name": "Dinosaur National Monument",
+      "type": "darksky",
+      "state": "CO",
+      "lat": 40.436,
+      "lng": -109.301,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky monument."
+    },
+    {
+      "id": "natural-bridges-ut",
+      "name": "Natural Bridges National Monument",
+      "type": "darksky",
+      "state": "UT",
+      "lat": 37.601,
+      "lng": -110.013,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "World's first International Dark Sky Park."
+    },
+    {
+      "id": "cosmic-campground-nm",
+      "name": "Cosmic Campground",
+      "type": "darksky",
+      "state": "NM",
+      "lat": 33.479,
+      "lng": -108.921,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "International Dark Sky Sanctuary."
+    },
+    {
+      "id": "mojave-preserve-ca",
+      "name": "Mojave National Preserve (Kelso Dunes)",
+      "type": "park",
+      "state": "CA",
+      "lat": 34.887,
+      "lng": -115.708,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Very dark; open desert."
+    },
+    {
+      "id": "anza-borrego-ca",
+      "name": "Anza-Borrego Desert State Park",
+      "type": "darksky",
+      "state": "CA",
+      "lat": 33.255,
+      "lng": -116.401,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky park; San Diego glow to the west."
+    },
+    {
+      "id": "mauna-loa-hi",
+      "name": "Mauna Loa Lookout",
+      "type": "viewpoint",
+      "state": "HI",
+      "lat": 19.517,
+      "lng": -155.376,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "High and dark."
+    },
+    {
+      "id": "okeechobee-fl",
+      "name": "Big Cypress National Preserve",
+      "type": "darksky",
+      "state": "FL",
+      "lat": 25.857,
+      "lng": -81.034,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky preserve in S Florida."
+    },
+    {
+      "id": "pictured-rocks-mi",
+      "name": "Pictured Rocks",
+      "type": "viewpoint",
+      "state": "MI",
+      "lat": 46.557,
+      "lng": -86.334,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Upper Peninsula; dark Lake Superior shore."
+    },
+    {
+      "id": "wind-cave-sd",
+      "name": "Wind Cave National Park",
+      "type": "park",
+      "state": "SD",
+      "lat": 43.6043,
+      "lng": -103.479,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Open prairie; dark."
+    },
+    {
+      "id": "el-morro-nm",
+      "name": "El Morro National Monument",
+      "type": "park",
+      "state": "NM",
+      "lat": 35.041,
+      "lng": -108.349,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Remote NW New Mexico."
+    },
+    {
+      "id": "great-falls-va",
+      "name": "Great Falls Park",
+      "type": "viewpoint",
+      "state": "VA",
+      "lat": 38.9976,
+      "lng": -77.253,
+      "bortle": 6,
+      "bestFor": [
+        "sunset"
+      ],
+      "notes": "Close to DC — bright sky, but a quick nature escape."
+    },
+    {
+      "id": "sandy-hook-nj",
+      "name": "Sandy Hook",
+      "type": "viewpoint",
+      "state": "NJ",
+      "lat": 40.435,
+      "lng": -73.992,
+      "bortle": 6,
+      "bestFor": [
+        "sunrise"
+      ],
+      "notes": "NYC skyline glow; ocean sunrise."
+    },
+    {
+      "id": "hawaii-volcanoes-hi",
+      "name": "Hawaiʻi Volcanoes National Park",
+      "type": "park",
+      "state": "HI",
+      "lat": 19.4194,
+      "lng": -155.2885,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Eruption glow can affect the southern sky; check volcanic activity. Excellent overhead views."
+    },
+    {
+      "id": "wrangell-ak",
+      "name": "Wrangell-St. Elias National Park",
+      "type": "park",
+      "state": "AK",
+      "lat": 61.7105,
+      "lng": -142.9858,
+      "bortle": 1,
+      "bestFor": [
+        "stars",
+        "milkyway"
+      ],
+      "notes": "Largest US national park; extremely remote and dark. Northern lights visible in winter."
+    },
+    {
+      "id": "acadia-me",
+      "name": "Acadia National Park",
+      "type": "darksky",
+      "state": "ME",
+      "lat": 44.3386,
+      "lng": -68.2733,
+      "bortle": 3,
+      "bestFor": [
+        "sunrise",
+        "stars"
+      ],
+      "notes": "First International Dark Sky Park in the Eastern US. Ocean horizon to the east."
+    },
+    {
+      "id": "white-mountains-nh",
+      "name": "White Mountains (Franconia Notch)",
+      "type": "viewpoint",
+      "state": "NH",
+      "lat": 44.1378,
+      "lng": -71.6829,
+      "bortle": 3,
+      "bestFor": [
+        "stars",
+        "milkyway"
+      ],
+      "notes": "Open notch with low ridgeline horizons; reasonably dark for New England."
+    },
+    {
+      "id": "groton-vt",
+      "name": "Groton State Forest, VT",
+      "type": "viewpoint",
+      "state": "VT",
+      "lat": 44.2101,
+      "lng": -72.2573,
+      "bortle": 3,
+      "bestFor": [
+        "stars",
+        "milkyway"
+      ],
+      "notes": "One of the darker spots in Vermont; lake reflections add to the view."
+    },
+    {
+      "id": "sequeoia-ca",
+      "name": "Sequoia National Park",
+      "type": "park",
+      "state": "CA",
+      "lat": 36.4864,
+      "lng": -118.5658,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "High Sierra; very dark. Giant trees frame views of the sky."
+    },
+    {
+      "id": "big-island-volc-view",
+      "name": "Mauna Loa Observatory Road",
+      "type": "viewpoint",
+      "state": "HI",
+      "lat": 19.535,
+      "lng": -155.475,
+      "bortle": 1,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Above the clouds; among the best stargazing on Earth. Cold at altitude."
+    },
+    {
+      "id": "cumberland-island-ga",
+      "name": "Cumberland Island National Seashore",
+      "type": "viewpoint",
+      "state": "GA",
+      "lat": 30.8549,
+      "lng": -81.4529,
+      "bortle": 3,
+      "bestFor": [
+        "stars",
+        "sunrise"
+      ],
+      "notes": "Remote barrier island; no vehicle traffic, very dark for the SE coast."
+    },
+    {
+      "id": "congaree-sc",
+      "name": "Congaree National Park",
+      "type": "darksky",
+      "state": "SC",
+      "lat": 33.7948,
+      "lng": -80.782,
+      "bortle": 4,
+      "bestFor": [
+        "stars"
+      ],
+      "notes": "Dark sky park; swampy lowland with open canopy."
+    },
+    {
+      "id": "little-bighorn-mt",
+      "name": "Little Bighorn (Big Sky Country)",
+      "type": "viewpoint",
+      "state": "MT",
+      "lat": 45.5675,
+      "lng": -107.427,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Open eastern Montana plains; extremely dark and flat 360° horizon."
+    },
+    {
+      "id": "boundary-waters-mn",
+      "name": "Boundary Waters Canoe Area",
+      "type": "darksky",
+      "state": "MN",
+      "lat": 47.9547,
+      "lng": -91.7783,
+      "bortle": 2,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Dark sky wilderness; northern lights frequent in fall/winter."
+    },
+    {
+      "id": "flint-hills-ks",
+      "name": "Tallgrass Prairie NP, KS",
+      "type": "park",
+      "state": "KS",
+      "lat": 38.438,
+      "lng": -96.5563,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Open prairie; very flat horizon in all directions."
+    },
+    {
+      "id": "ouachita-ar",
+      "name": "Ouachita National Forest, AR",
+      "type": "viewpoint",
+      "state": "AR",
+      "lat": 34.652,
+      "lng": -93.631,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "Reasonably dark for the South; rolling forested hills."
+    },
+    {
+      "id": "natchez-trace-ms",
+      "name": "Natchez Trace Parkway",
+      "type": "viewpoint",
+      "state": "MS",
+      "lat": 32.3077,
+      "lng": -90.168,
+      "bortle": 4,
+      "bestFor": [
+        "stars",
+        "sunset"
+      ],
+      "notes": "Rural corridor; darker than most of Mississippi."
+    },
+    {
+      "id": "west-virginia-dolly",
+      "name": "Dolly Sods Wilderness, WV",
+      "type": "viewpoint",
+      "state": "WV",
+      "lat": 38.9565,
+      "lng": -79.387,
+      "bortle": 3,
+      "bestFor": [
+        "milkyway",
+        "stars"
+      ],
+      "notes": "High plateau; one of the darkest spots in the Mid-Atlantic."
+    }
+  ]
+}
